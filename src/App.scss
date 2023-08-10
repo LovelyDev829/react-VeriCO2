@@ -1,0 +1,149 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.App {
+  font-family: fantasy;
+  // height: 100vh;
+  width: 100vw;
+
+  //overflow-y: hidden;
+  .Header {
+    z-index: 10;
+    position: fixed;
+
+    .white-area {
+      height: 7.2vw;
+      width: 100vw;
+      background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.938) 80%, rgba(255, 255, 255, 0) 100%);
+      margin-bottom: -2.2vw;
+    }
+
+    .header-logo-line {
+      position: relative;
+
+      .header-line {
+        width: 100vw;
+      }
+
+      .header-logo {
+        width: 25vw;
+        position: absolute;
+        top: -2.5vw;
+        left: 10.5vw;
+      }
+
+      .buttons {
+        position: absolute;
+        top: 0vw;
+        right: 10vw;
+        height: 2.2vw;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        span {
+          color: white;
+          font-size: 1.5vw;
+          margin: 0px 1vw 0px 1vw;
+        }
+      }
+    }
+  }
+
+  .MainPage {
+    .main {
+      .main-back {
+        width: 100%;
+      }
+
+      .title-polygon {
+        position: absolute;
+        top: 11vw;
+        background-color: rgb(172, 37, 41);
+        width: 60vw;
+        height: 28vw;
+        clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+        padding: 5.5vw 0px 0px 10vw;
+        box-sizing: border-box;
+
+        span {
+          color: white;
+          font-size: 4vw;
+          display: flex;
+          flex-direction: column;
+          font-family: fantasy;
+        }
+      }
+
+      .earth-on-hand {
+        position: absolute;
+        top: 9vw;
+        right: -6vw;
+        width: 64vw;
+      }
+
+      .bubbles {
+        position: absolute;
+        top: 23vw;
+        right: 25vw;
+
+        .co2 {
+          position: absolute;
+
+          &:nth-child(1) {
+            bottom: 2vw;
+            left: 7vw;
+            width: 6vw;
+          }
+
+          &:nth-child(2) {
+            top: 2vw;
+            left: 0vw;
+            width: 14vw;
+          }
+
+          &:nth-child(3) {
+            top: 17vw;
+            right: 0vw;
+            width: 10vw;
+          }
+
+          &:nth-child(4) {
+            top: 21vw;
+            right: 13vw;
+            width: 8vw;
+          }
+
+          &:nth-child(5) {
+            top: 17vw;
+            right: 26vw;
+            width: 4vw;
+          }
+
+          &:nth-child(6) {
+            top: 11vw;
+            right: 13vw;
+            width: 3vw;
+          }
+
+          &:nth-child(7) {
+            top: 2vw;
+            left: 14vw;
+            width: 3vw;
+          }
+        }
+      }
+    }
+  }
+
+  .Footer {
+    .footer-back{
+      margin-top: -150px;
+      
+      width: 100%;
+    }
+  }
+}
