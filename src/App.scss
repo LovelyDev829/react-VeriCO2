@@ -90,7 +90,7 @@ body {
           transition-duration: 0.1s;
 
           &:active {
-            color: rgba(255, 255, 255, 0.76);
+            color: rgba(255, 255, 255, 0.4);
             text-shadow: none;
           }
         }
@@ -214,6 +214,10 @@ body {
 
         svg {
           color: white;
+          cursor: pointer;
+          &:active{
+            color: rgba(255, 255, 255, 0.4);
+          }
         }
       }
 
