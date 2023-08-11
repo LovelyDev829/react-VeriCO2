@@ -5,7 +5,12 @@ import headerLogo from '../assets/images/header-logo.png'
 function Header() {
   return (
     <div className='Header'>
-        <div className='white-area'></div>
+        <div className='white-area'>
+            <div className='buttons'>
+                <div className='button'>Login</div>
+                <div className='button'>Sign up</div>
+            </div>
+        </div>
         <div className='header-logo-line'>
             <img src={headerLine} alt="Header Line" className='header-line'/>
             <img src={headerLogo} alt="Header Logo" className='header-logo'/>

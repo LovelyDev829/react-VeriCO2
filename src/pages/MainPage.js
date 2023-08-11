@@ -12,8 +12,8 @@ function MainPage() {
         <div className='main'>
             <img src={mainBack} alt="Main Back" className='main-back'/>
             <div className='title-polygon'>
-                <span>Website for Automated</span>
-                <span>Scope 3 Emissions</span>
+                <span>Automated Scope 3</span>
+                <span>Emissions</span>
                 <span>Quantification</span>
             </div>
             <img src={earthOnHand} alt="Earth on Hand" className='earth-on-hand'/>
