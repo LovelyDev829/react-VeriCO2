@@ -125,11 +125,34 @@ body {
         }
       }
 
-      .earth-on-hand {
+      // .earth-on-hand {
+      //   position: absolute;
+      //   top: 9vw;
+      //   right: -6vw;
+      //   width: 64vw;
+      //   z-index: 2;
+      // }
+      .earth-back-hand {
         position: absolute;
         top: 9vw;
         right: -6vw;
         width: 64vw;
+        z-index: 2;
+      }
+      .earth-over-hand {
+        position: absolute;
+        top: 9vw;
+        right: -6vw;
+        width: 64vw;
+        z-index: 5;
+      }
+      
+      .earth-gif{
+        position: absolute;
+        top: -7vw;
+        right: -20vw;
+        width: 90vw;
+        z-index: 3;
       }
 
       .bubbles {
@@ -140,7 +163,7 @@ body {
 
         .co2 {
           position: absolute;
-
+          z-index: 6;
           &:nth-child(1) {
             bottom: 2vw;
             left: 7vw;
@@ -175,6 +198,7 @@ body {
             opacity: 0;
             animation: rise linear 10s infinite, opacit ease-in-out 10s infinite, shake ease-in-out 4s infinite;
             animation-delay: 8.5s;
+            z-index: 1;
           }
 
           &:nth-child(5) {
@@ -184,6 +208,7 @@ body {
             opacity: 0;
             animation: rise linear 5s infinite, opacit ease-in-out 5s infinite, shake ease-in-out 2s infinite;
             animation-delay: 7.5s;
+            z-index: 1;
           }
 
           &:nth-child(6) {
