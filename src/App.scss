@@ -137,6 +137,7 @@ body {
         top: 23vw;
         right: 25vw;
 
+
         .co2 {
           position: absolute;
 
@@ -203,6 +204,7 @@ body {
       .footer-logo {
         margin: auto;
         width: 15vw;
+        user-select: none;
       }
 
       .icons {
@@ -213,6 +215,7 @@ body {
         gap: 2vw;
 
         svg {
+          user-select: none;
           color: white;
           cursor: pointer;
           &:active{
