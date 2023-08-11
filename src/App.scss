@@ -145,42 +145,63 @@ body {
             bottom: 2vw;
             left: 7vw;
             width: 6vw;
+            opacity: 0;
+            animation: rise linear 10s infinite, opacit ease-in-out 10s infinite, shake ease-in-out 4s infinite;
+            animation-delay: 2.5s;
           }
 
           &:nth-child(2) {
             top: 2vw;
             left: 0vw;
             width: 14vw;
+            opacity: 0;
+            animation: rise linear 20s infinite, opacit ease-in-out 20s infinite, shake ease-in-out 8s infinite;
+            animation-delay: 0s;
           }
 
           &:nth-child(3) {
             top: 17vw;
             right: 0vw;
             width: 10vw;
+            opacity: 0;
+            animation: rise linear 12s infinite, opacit ease-in-out 12s infinite, shake ease-in-out 5s infinite;
+            animation-delay: 15s;
           }
 
           &:nth-child(4) {
             top: 21vw;
             right: 13vw;
             width: 8vw;
+            opacity: 0;
+            animation: rise linear 10s infinite, opacit ease-in-out 10s infinite, shake ease-in-out 4s infinite;
+            animation-delay: 8.5s;
           }
 
           &:nth-child(5) {
             top: 17vw;
             right: 26vw;
             width: 4vw;
+            opacity: 0;
+            animation: rise linear 5s infinite, opacit ease-in-out 5s infinite, shake ease-in-out 2s infinite;
+            animation-delay: 7.5s;
           }
 
           &:nth-child(6) {
             top: 11vw;
             right: 13vw;
             width: 3vw;
+            opacity: 0;
+            animation: rise linear 5s infinite, opacit ease-in-out 5s infinite, shake ease-in-out 2s infinite;
+            animation-delay: 2s;
           }
 
           &:nth-child(7) {
             top: 2vw;
             left: 14vw;
             width: 3vw;
+            opacity: 0;
+            animation: rise linear 5s infinite, opacit ease-in-out 5s infinite, shake ease-in-out 2s infinite;
+            animation-delay: 0s;
           }
         }
       }
@@ -233,4 +254,21 @@ body {
       }
     }
   }
+}
+
+
+@keyframes shake {
+  0%   {transform: rotate(-20deg);}
+  50%  {transform: rotate(20deg);}
+  100% {transform: rotate(-20deg);}
+}
+@keyframes rise {
+  0%   {top: 20vw;}
+  100% {top: -10vw;}
+}
+@keyframes opacit {
+  0%   {opacity: 0;}
+  50%  {opacity: 1;}
+  80%  {opacity: 1;}
+  100% {opacity: 0;}
 }
