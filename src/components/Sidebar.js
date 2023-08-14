@@ -1,15 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Sidebar({sideBarFlag, setSideBarFlag}) {
-  return (
-    <div className={sideBarFlag ? 'Sidebar show':'Sidebar'} onClick={(e)=>{e.stopPropagation()}}>
-        <div className='item' onClick={()=>setSideBarFlag(false)}>About</div>
-        <div className='item' onClick={()=>setSideBarFlag(false)}>Calculation & Display</div>
-        <div className='item' onClick={()=>setSideBarFlag(false)}>Contact Us</div>
-        <div className='item' onClick={()=>setSideBarFlag(false)}>Sign Up</div>
-        <div className='item' onClick={()=>setSideBarFlag(false)}>Log In</div>
-    </div>
-  )
+function Sidebar({ sideBarFlag, setSideBarFlag }) {
+    const navigate = useNavigate();
+    return (
+        <div className={sideBarFlag ? 'Sidebar show' : 'Sidebar'} onClick={(e) => { e.stopPropagation() }}>
+            <div className='item' onClick={() => setSideBarFlag(false)}>About</div>
+            <div className='item' onClick={() => setSideBarFlag(false)}>Calculation & Display</div>
+            <div className='item' onClick={() => setSideBarFlag(false)}>Contact Us</div>
+            <div className='item' onClick={() => {
+                setSideBarFlag(false);
+                navigate('/signup')
+            }}>Sign Up</div>
+            <div className='item' onClick={() => {
+                setSideBarFlag(false);
+                navigate('/login')
+            }}>Log In</div>
+        </div>
+    )
 }
 
 export default Sidebar

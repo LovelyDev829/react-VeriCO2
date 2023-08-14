@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from '../components/Header'
 import mainBack from '../assets/images/main-back.jpg'
 import earthOnHand from '../assets/images/earth-on-hand.png'
@@ -7,13 +7,25 @@ import earthOnHand from '../assets/images/earth-on-hand.png'
 // import animEarth from '../assets/gif/earth.gif'
 import coTwoBubble from '../assets/images/co2-bubble.png'
 import Footer from '../components/Footer'
-function MainPage({sideBarFlag, setSideBarFlag}) {
+function MainPage({ sideBarFlag, setSideBarFlag }) {
+  const [deviceType, setDeviceType] = useState(null);
+  useEffect(() => {
+    const platform = navigator.platform;
+    setDeviceType(
+      /iphone|ipad|ipod|android|webos|blackberry|windows phone/.test(
+        platform
+      )
+        ? "mobile"
+        : "desktop"
+    );
+  }, []);
   return (
-    <div className='MainPage' onClick={()=>setSideBarFlag(false)}>
-      <Header sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>
+    <div className='MainPage' onClick={() => setSideBarFlag(false)}>
+      <Header sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag} />
       <div className='main'>
         <img src={mainBack} alt="Main Back" className='main-back' />
         <div className='title-polygon'>
+          <span>{deviceType}</span>
           <span>Automated Scope 3</span>
           <span>Emissions</span>
           <span>Quantification</span>

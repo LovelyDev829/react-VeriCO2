@@ -322,6 +322,176 @@ body {
       transform: translate(0);
     }
   }
+
+  .LoginPage{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .login-left{
+      height: 100vh;
+      z-index: 10;
+      // position: absolute;
+      // top: 0px;
+      // left: 0px;
+    }
+    .right{
+      // margin-left: 600px;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // background-color: #2b97f1;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        .main-logo{
+          width: 50%;
+          margin: auto;
+        }
+        .input-box{
+          padding: 15px 20px;
+          border: 1px black solid;
+          border-radius: 5px;
+          margin: 10px 0px;
+          input{
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0);
+          }
+        }
+        .button{
+          padding: 20px;
+          margin: 10px 0px;
+          background-color: black;
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          cursor: pointer;
+          user-select: none;
+          &:hover{
+            background-color: rgb(32, 32, 32);
+          }
+          &:active{
+            background-color: rgb(105, 105, 105);
+          }
+        }
+        span{
+          min-width: max-content;
+          color: rgb(51, 166, 1);
+          padding: 10px 0px;
+          &:nth-child(6){
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+              color: #3ecf00;
+            }
+            &:active{
+              color: #206b00;
+            }
+          }
+          &:nth-child(7){
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+              color: #3ecf00;
+            }
+            &:active{
+              color: #206b00;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .SignupPage{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .signup-left{
+      height: 100vh;
+      z-index: 10;
+      // position: absolute;
+      // top: 0px;
+      // left: 0px;
+    }
+    .right{
+      // margin-left: 600px;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // background-color: #2b97f1;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        .main-logo{
+          width: 50%;
+          margin: auto;
+        }
+        .input-box{
+          padding: 15px 20px;
+          border: 1px black solid;
+          border-radius: 5px;
+          margin: 10px 0px;
+          input{
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0);
+          }
+        }
+        .button{
+          padding: 20px;
+          margin: 10px 0px;
+          background-color: black;
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          cursor: pointer;
+          user-select: none;
+          &:hover{
+            background-color: rgb(32, 32, 32);
+          }
+          &:active{
+            background-color: rgb(105, 105, 105);
+          }
+        }
+        span{
+          min-width: max-content;
+          color: rgb(51, 166, 1);
+          padding: 10px 0px;
+          &:last-child{
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+              color: #3ecf00;
+            }
+            &:active{
+              color: #206b00;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -468,6 +638,11 @@ body {
     .Footer {  
       .details {
         padding: 5vw 3vw 3vw 3vw;
+      }
+    }
+    .LoginPage{
+      .login-left{
+        display: none;
       }
     }
   }
@@ -663,6 +838,79 @@ body {
         .bubbles {
           top: 84vw;
           right: 35vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (orientation:portrait) {
+  /* The width is greater than the height */
+  .App{
+    .LoginPage{
+      .login-left{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: calc( 100vh + 150px )) {
+  /* The width is greater than the height */
+  .App{
+    .LoginPage{
+      .login-left{
+        display: none;
+      }
+    }
+    .SignupPage{
+      .signup-left{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  /* The width is greater than the height */
+  .App{
+    .LoginPage{
+      .right{
+        .center{
+          .input-box{
+            padding: 10px;
+            margin: 5px 0px;
+          }
+          .button{
+            padding: 10px;
+            margin: 5px 0px;
+          }
+          span{
+            padding: 5px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  /* The width is greater than the height */
+  .App{
+    .SignupPage{
+      .right{
+        .center{
+          .input-box{
+            padding: 10px;
+            margin: 5px 0px;
+          }
+          .button{
+            padding: 10px;
+            margin: 5px 0px;
+          }
+          span{
+            padding: 5px 0px;
+          }
         }
       }
     }
