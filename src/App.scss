@@ -1,22 +1,23 @@
 body {
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  
 }
 
 .App {
   font-family: sans-serif;
-  // height: 100vh;
   width: 100vw;
-
-  //overflow-y: hidden;
+  height: 100vh;
+  background-color: #2b97f1;
+  position: relative;
+  overflow-x: hidden;
   .Header {
     z-index: 10;
     position: fixed;
 
     .white-area {
       height: 7.2vw;
-      width: 100vw;
+      width: 100%;
       background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.938) 80%, rgba(255, 255, 255, 0) 100%);
       margin-bottom: -2.2vw;
       display: flex;
@@ -55,6 +56,9 @@ body {
             background-color: rgba(50, 166, 1, 0.76);
           }
         }
+      }
+      .menu-button{
+        display: none;
       }
     }
 
@@ -95,6 +99,9 @@ body {
           }
         }
       }
+    }
+    .mobile-header{
+      display: none;
     }
   }
 
@@ -159,7 +166,6 @@ body {
         position: absolute;
         top: 23vw;
         right: 25vw;
-
 
         .co2 {
           position: absolute;
@@ -234,6 +240,8 @@ body {
   }
 
   .Footer {
+      z-index: 5;
+      position: relative;
     .footer-back-top {
       margin-top: -12vw;
       margin-bottom: -1vw;
@@ -242,7 +250,8 @@ body {
 
     .details {
       width: 100vw;
-      padding: 1vw 0vw 3vw 0vw;
+      padding: 5vw 10vw 3vw 10vw;
+      box-sizing: border-box;
       background-color: rgb(43, 151, 241);
       display: flex;
       flex-direction: column;
@@ -279,6 +288,40 @@ body {
       }
     }
   }
+
+  .Sidebar{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    // background-color: rgba(255, 255, 255, 0.781);
+    background-color: #0b2500b0;
+    // width: 100px;
+    height: 100vh;
+    padding: 100px 30px;
+    box-sizing: border-box;
+    transform: translate(100%);
+    transition-duration: 0.2s;
+    .item{
+      cursor: pointer;
+      padding: 20px 20px;
+      // border-bottom: 1px #33a601 solid;
+      border-bottom: 1px white solid;
+      // color: #33a601;
+      color: white;
+      box-sizing: border-box;
+      user-select: none;
+      &:active{
+        color: #33a601;
+      }
+      &:first-child{
+        border-top: 1px white solid;
+        // border-top: 1px #33a601 solid;
+      }
+    }
+    &.show{
+      transform: translate(0);
+    }
+  }
 }
 
 
@@ -296,4 +339,332 @@ body {
   50%  {opacity: 1;}
   80%  {opacity: 1;}
   100% {opacity: 0;}
+}
+
+@media only screen and (max-width: 1200px) {
+  .App {  
+    .Footer {
+      .details {  
+        .term {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    .Header {
+
+      .white-area {
+        height: 72px;
+        margin-bottom: -22px;
+        padding-right: 100px;
+
+        .buttons {
+          margin-bottom: 22px;
+
+          .button {
+            padding: 4px 20px;
+            font-size: 12px;
+            border-radius: 5px;
+            &:last-child{
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+
+      .header-logo-line {
+        width: 100vw;
+
+        .header-line {
+          width: 1000px;
+        }
+
+        .header-logo {
+          width: 250px;
+          top: -25px;
+          left: 105px;
+        }
+
+        .buttons {
+          top: 0vw;
+          right: 100px;
+          height: 22px;
+
+          span {
+            font-size: 12px;
+            padding: 0px 0px 0px 20px;
+          }
+        }
+      }
+    }
+
+    .MainPage {
+      .main {
+        .main-back {
+          width: 100%;
+        }
+  
+        .title-polygon {
+          top: 110px;
+          width: 60vw;
+          height: 28vw;
+          padding: 5.5vw 0px 0px 10vw;
+  
+          span {
+            font-size: 4vw;
+          }
+        }
+  
+        .earth-on-hand {
+          top: 90px;
+          right: -6vw;
+          width: 64vw;
+        }
+      }
+    }
+  
+    .Footer {
+      .footer-back-top {
+        margin-top: -12vw;
+        margin-bottom: -1vw;
+        width: 100%;
+      }
+  
+      .details {
+        padding: 5vw 5vw 3vw 5vw;
+  
+        .footer-logo {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .App {
+    .Header {
+      .white-area {
+        padding-right: 5vw;
+      }
+
+      .header-logo-line {
+        .buttons {
+          right: 5vw;
+        }
+      }
+    }
+    .MainPage {
+      .main {
+        .title-polygon {
+          padding: 5.5vw 0px 0px 5vw;
+        }
+      }
+    }
+    .Footer {  
+      .details {
+        padding: 5vw 3vw 3vw 3vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .App {
+    .Header {
+      .white-area {
+        height: 13vw;
+        min-height: 60px;
+        margin-bottom: -7vw;
+        background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.938) 80%, rgba(255, 255, 255, 0) 100%);
+        align-items: flex-start;
+        padding: 2.5vw 2.5vw 0px 0px;
+        box-sizing: border-box;
+        .buttons {
+          display: none;
+        }
+        .menu-button{
+          display: block;
+          svg{
+            color: #33a601;
+            &:active{
+              color: rgb(0, 0, 0);
+            }
+          }
+          // background-color: #2b97f1;
+          
+        }
+      }
+
+      .header-logo-line {
+        display: none;
+      }
+      .mobile-header{
+        display: block;
+        .header-logo-line-mobile{
+          width: 100vw;
+        }
+      }
+    }
+    .MainPage {
+      .main {
+        margin-bottom: -5vw;
+        .main-back {
+          width: 200vw;
+          transform: translate(-35%);
+          z-index: 0;
+          position: relative;
+        }
+  
+        .title-polygon {
+          top: 20vw;
+          width: 80vw;
+          height: 40vw;
+          padding: 5.5vw 0px 0px 5vw;
+  
+          span {
+            font-size: 7vw;
+          }
+        }
+  
+        .earth-on-hand {
+          // display: none;
+          top: 50vw;
+          right: 0px;
+          width: 80vw;
+        }
+
+        .bubbles {
+          top: 64vw;
+          right: 31vw;
+        }
+      }
+    }  
+    .Footer {
+      
+      .details {
+        padding: 5vw 3vw 3vw 3vw;
+        .footer-logo {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .App {
+    .Header {
+      .white-area {
+        height: 13vw;
+        min-height: 60px;
+        margin-bottom: -7vw;
+        background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.938) 80%, rgba(255, 255, 255, 0) 100%);
+        align-items: flex-start;
+        padding: 2.5vw 2.5vw 0px 0px;
+        box-sizing: border-box;
+        .buttons {
+          display: none;
+        }
+        .menu-button{
+          display: block;
+          svg{
+            color: #33a601;
+            &:active{
+              color: rgb(0, 0, 0);
+            }
+          }
+          // background-color: #2b97f1;
+          
+        }
+      }
+
+      .header-logo-line {
+        display: none;
+      }
+      .mobile-header{
+        display: block;
+        .header-logo-line-mobile{
+          width: 100vw;
+        }
+      }
+    }
+    .MainPage {
+      .main {
+        .main-back {
+          width: 240vw;
+          transform: translate(-45%);
+        }
+  
+        .title-polygon {
+          top: 24vw;
+          width: 85vw;
+          height: 50vw;
+          padding: 5.5vw 0px 0px 5vw;
+  
+          span {
+            font-size: 9vw;
+          }
+        }
+  
+        .earth-on-hand {
+          top: 70vw;
+          right: 0px;
+          width: 100vw;
+        }
+
+        .bubbles {
+          top: 84vw;
+          right: 35vw;
+        }
+      }
+    }
+    .Footer {
+      .details {
+        padding: 10vw 3vw 3vw 3vw;
+        .footer-logo {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .App {
+    .MainPage {
+      .main {
+        .main-back {
+          width: 240vw;
+          transform: translate(-45%);
+        }
+  
+        .title-polygon {
+          top: 80px;
+          width: 85vw;
+          height: 50vw;
+          padding: 5.5vw 0px 0px 5vw;
+  
+          span {
+            font-size: 9vw;
+          }
+        }
+  
+        .earth-on-hand {
+          top: 80vw;
+          right: 0px;
+          width: 100vw;
+        }
+
+        .bubbles {
+          top: 84vw;
+          right: 35vw;
+        }
+      }
+    }
+  }
 }
