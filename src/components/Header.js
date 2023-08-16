@@ -26,7 +26,7 @@ function Header({ sideBarFlag, setSideBarFlag }) {
                 <img src={headerLine} alt="Header Line" className='header-line' />
                 <img src={headerLogo} alt="Header Logo" className='header-logo' />
                 <div className='buttons'>
-                    <span>About</span>
+                    <span onClick={()=>navigate('/about')}>About</span>
                     <span>Calculation & Display</span>
                     <span>Contact Us</span>
                 </div>

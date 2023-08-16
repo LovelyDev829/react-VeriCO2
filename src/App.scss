@@ -142,10 +142,10 @@ body {
           padding: 0.8vw 1.5vw;
           margin-top: 1.5vw;
           border-radius: 0.5vw;
-          background: linear-gradient(233.08deg,#9f40ff 1.8%,#851ded 95.5%);
-          // background-color: rgb(51, 166, 1);
-          // border: 1px white solid;
+          background: linear-gradient(233.08deg, rgb(134, 192, 109) 1.8%,rgb(51, 166, 1) 95.5%);
+          border: 1px white solid;
           color: white;
+          box-shadow: -0.1vw 0.1vw 0.1vw 0.05vw rgba(0, 0, 0, 0.2);
           cursor: pointer;
           user-select: none;
           &:hover{
@@ -798,7 +798,7 @@ body {
         .title-polygon {
           top: 20vw;
           width: 80vw;
-          height: 45vw;
+          height: 47vw;
           padding: 5.5vw 0px 0px 5vw;
 
           span {
@@ -810,6 +810,7 @@ body {
             padding: 0.8vw 1.5vw;
             margin-top: 2vw;
             border-radius: 0.6vw;
+            box-shadow: -0.2vw 0.2vw 0.3vw 0.2vw rgba(0, 0, 0, 0.2);
           }
         }
 
@@ -895,7 +896,7 @@ body {
         .title-polygon {
           top: 24vw;
           width: 85vw;
-          height: 55vw;
+          height: 57vw;
           padding: 5.5vw 0px 0px 5vw;
 
           span {
@@ -947,7 +948,7 @@ body {
         .title-polygon {
           top: 80px;
           width: 85vw;
-          height: 55vw;
+          height: 57vw;
           padding: 5.5vw 0px 0px 5vw;
 
           span {
