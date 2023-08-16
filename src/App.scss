@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  
+
 }
 
 .App {
@@ -11,6 +11,7 @@ body {
   background-color: #2b97f1;
   position: relative;
   overflow-x: hidden;
+
   .Header {
     z-index: 10;
     position: fixed;
@@ -45,19 +46,23 @@ body {
           user-select: none;
           background-color: rgb(51, 166, 1);
           transition-duration: 0.1s;
-          &:last-child{
+
+          &:last-child {
             margin-left: 2vw;
           }
-          &:hover{
+
+          &:hover {
             box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
           }
-          &:active{
+
+          &:active {
             box-shadow: none;
             background-color: rgba(50, 166, 1, 0.76);
           }
         }
       }
-      .menu-button{
+
+      .menu-button {
         display: none;
       }
     }
@@ -100,7 +105,8 @@ body {
         }
       }
     }
-    .mobile-header{
+
+    .mobile-header {
       display: none;
     }
   }
@@ -114,12 +120,11 @@ body {
       .title-polygon {
         position: absolute;
         top: 11vw;
-        background-color: rgb(172, 37, 41);
         background-color: rgb(51, 166, 1);
         width: 60vw;
         height: 28vw;
         clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
-        padding: 5.5vw 0px 0px 10vw;
+        padding: 4vw 0px 0px 10vw;
         box-sizing: border-box;
 
         span {
@@ -130,6 +135,28 @@ body {
           flex-direction: column;
           font-family: fantasy;
         }
+
+        .button {
+          width: fit-content;
+          font-size: 2vw;
+          padding: 0.8vw 1.5vw;
+          margin-top: 1.5vw;
+          border-radius: 0.5vw;
+          background: linear-gradient(233.08deg,#9f40ff 1.8%,#851ded 95.5%);
+          // background-color: rgb(51, 166, 1);
+          // border: 1px white solid;
+          color: white;
+          cursor: pointer;
+          user-select: none;
+          &:hover{
+            background: white;
+            color: rgb(51, 166, 1);
+          }
+          &:active{
+            background: rgb(204, 226, 194);
+            color: rgb(51, 166, 1);
+          }
+        }
       }
 
       .earth-on-hand {
@@ -139,6 +166,7 @@ body {
         width: 64vw;
         z-index: 5;
       }
+
       .earth-back-hand {
         position: absolute;
         top: 9vw;
@@ -146,6 +174,7 @@ body {
         width: 64vw;
         z-index: 2;
       }
+
       .earth-over-hand {
         position: absolute;
         top: 9vw;
@@ -153,8 +182,8 @@ body {
         width: 64vw;
         z-index: 5;
       }
-      
-      .earth-gif{
+
+      .earth-gif {
         position: absolute;
         top: -7vw;
         right: -20vw;
@@ -170,6 +199,7 @@ body {
         .co2 {
           position: absolute;
           z-index: 6;
+
           &:nth-child(1) {
             bottom: 2vw;
             left: 7vw;
@@ -240,8 +270,9 @@ body {
   }
 
   .Footer {
-      z-index: 5;
-      position: relative;
+    z-index: 5;
+    position: relative;
+
     .footer-back-top {
       margin-top: -12vw;
       margin-bottom: -1vw;
@@ -273,7 +304,8 @@ body {
           user-select: none;
           color: white;
           cursor: pointer;
-          &:active{
+
+          &:active {
             color: rgba(255, 255, 255, 0.4);
           }
         }
@@ -289,7 +321,7 @@ body {
     }
   }
 
-  .Sidebar{
+  .Sidebar {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -301,7 +333,8 @@ body {
     box-sizing: border-box;
     transform: translate(100%);
     transition-duration: 0.2s;
-    .item{
+
+    .item {
       cursor: pointer;
       padding: 20px 20px;
       // border-bottom: 1px #33a601 solid;
@@ -310,20 +343,23 @@ body {
       color: white;
       box-sizing: border-box;
       user-select: none;
-      &:active{
+
+      &:active {
         color: #33a601;
       }
-      &:first-child{
+
+      &:first-child {
         border-top: 1px white solid;
         // border-top: 1px #33a601 solid;
       }
     }
-    &.show{
+
+    &.show {
       transform: translate(0);
     }
   }
 
-  .LoginPage{
+  .LoginPage {
     background-color: white;
     width: 100vw;
     height: 100vh;
@@ -331,19 +367,22 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    .login-left{
+
+    .login-left {
       height: 100vh;
       z-index: 10;
       // position: absolute;
       // top: 0px;
       // left: 0px;
     }
-    .right{
+
+    .right {
       // margin-left: 600px;
       width: 100%;
       height: 100vh;
       position: relative;
-      .center{
+
+      .center {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -351,16 +390,19 @@ body {
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
-        .main-logo{
+
+        .main-logo {
           width: 50%;
           margin: auto;
         }
-        .input-box{
+
+        .input-box {
           padding: 15px 20px;
           border: 1px black solid;
           border-radius: 5px;
           margin: 10px 0px;
-          input{
+
+          input {
             width: 100%;
             border: none;
             outline: none;
@@ -368,7 +410,8 @@ body {
             background-color: rgba(255, 255, 255, 0);
           }
         }
-        .button{
+
+        .button {
           padding: 20px;
           margin: 10px 0px;
           background-color: black;
@@ -377,34 +420,43 @@ body {
           border-radius: 5px;
           cursor: pointer;
           user-select: none;
-          &:hover{
+
+          &:hover {
             background-color: rgb(32, 32, 32);
           }
-          &:active{
+
+          &:active {
             background-color: rgb(105, 105, 105);
           }
         }
-        span{
+
+        span {
           min-width: max-content;
           color: rgb(51, 166, 1);
           padding: 10px 0px;
-          &:nth-child(6){
+
+          &:nth-child(6) {
             cursor: pointer;
             user-select: none;
-            &:hover{
+
+            &:hover {
               color: #3ecf00;
             }
-            &:active{
+
+            &:active {
               color: #206b00;
             }
           }
-          &:nth-child(7){
+
+          &:nth-child(7) {
             cursor: pointer;
             user-select: none;
-            &:hover{
+
+            &:hover {
               color: #3ecf00;
             }
-            &:active{
+
+            &:active {
               color: #206b00;
             }
           }
@@ -413,7 +465,7 @@ body {
     }
   }
 
-  .SignupPage{
+  .SignupPage {
     background-color: white;
     width: 100vw;
     height: 100vh;
@@ -421,19 +473,22 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    .signup-left{
+
+    .signup-left {
       height: 100vh;
       z-index: 10;
       // position: absolute;
       // top: 0px;
       // left: 0px;
     }
-    .right{
+
+    .right {
       // margin-left: 600px;
       width: 100%;
       height: 100vh;
       position: relative;
-      .center{
+
+      .center {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -441,16 +496,19 @@ body {
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
-        .main-logo{
+
+        .main-logo {
           width: 50%;
           margin: auto;
         }
-        .input-box{
+
+        .input-box {
           padding: 15px 20px;
           border: 1px black solid;
           border-radius: 5px;
           margin: 10px 0px;
-          input{
+
+          input {
             width: 100%;
             border: none;
             outline: none;
@@ -458,7 +516,8 @@ body {
             background-color: rgba(255, 255, 255, 0);
           }
         }
-        .button{
+
+        .button {
           padding: 20px;
           margin: 10px 0px;
           background-color: black;
@@ -467,24 +526,30 @@ body {
           border-radius: 5px;
           cursor: pointer;
           user-select: none;
-          &:hover{
+
+          &:hover {
             background-color: rgb(32, 32, 32);
           }
-          &:active{
+
+          &:active {
             background-color: rgb(105, 105, 105);
           }
         }
-        span{
+
+        span {
           min-width: max-content;
           color: rgb(51, 166, 1);
           padding: 10px 0px;
-          &:last-child{
+
+          &:last-child {
             cursor: pointer;
             user-select: none;
-            &:hover{
+
+            &:hover {
               color: #3ecf00;
             }
-            &:active{
+
+            &:active {
               color: #206b00;
             }
           }
@@ -496,25 +561,51 @@ body {
 
 
 @keyframes shake {
-  0%   {transform: rotate(-20deg);}
-  50%  {transform: rotate(20deg);}
-  100% {transform: rotate(-20deg);}
+  0% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
 }
+
 @keyframes rise {
-  0%   {top: 20vw;}
-  100% {top: -10vw;}
+  0% {
+    top: 20vw;
+  }
+
+  100% {
+    top: -10vw;
+  }
 }
+
 @keyframes opacit {
-  0%   {opacity: 0;}
-  50%  {opacity: 1;}
-  80%  {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-  .App {  
+  .App {
     .Footer {
-      .details {  
+      .details {
         .term {
           font-size: 12px;
         }
@@ -539,7 +630,8 @@ body {
             padding: 4px 20px;
             font-size: 12px;
             border-radius: 5px;
-            &:last-child{
+
+            &:last-child {
               margin-left: 20px;
             }
           }
@@ -577,18 +669,14 @@ body {
         .main-back {
           width: 100%;
         }
-  
+
         .title-polygon {
           top: 110px;
-          width: 60vw;
-          height: 28vw;
-          padding: 5.5vw 0px 0px 10vw;
-  
           span {
             font-size: 4vw;
           }
         }
-  
+
         .earth-on-hand {
           top: 90px;
           right: -6vw;
@@ -596,17 +684,17 @@ body {
         }
       }
     }
-  
+
     .Footer {
       .footer-back-top {
         margin-top: -12vw;
         margin-bottom: -1vw;
         width: 100%;
       }
-  
+
       .details {
         padding: 5vw 5vw 3vw 5vw;
-  
+
         .footer-logo {
           width: 150px;
         }
@@ -628,20 +716,23 @@ body {
         }
       }
     }
+
     .MainPage {
       .main {
         .title-polygon {
-          padding: 5.5vw 0px 0px 5vw;
+          padding: 4vw 0px 0px 5vw;
         }
       }
     }
-    .Footer {  
+
+    .Footer {
       .details {
         padding: 5vw 3vw 3vw 3vw;
       }
     }
-    .LoginPage{
-      .login-left{
+
+    .LoginPage {
+      .login-left {
         display: none;
       }
     }
@@ -659,53 +750,69 @@ body {
         align-items: flex-start;
         padding: 2.5vw 2.5vw 0px 0px;
         box-sizing: border-box;
+
         .buttons {
           display: none;
         }
-        .menu-button{
+
+        .menu-button {
           display: block;
-          svg{
+
+          svg {
             color: #33a601;
-            &:active{
+
+            &:active {
               color: rgb(0, 0, 0);
             }
           }
+
           // background-color: #2b97f1;
-          
+
         }
       }
 
       .header-logo-line {
         display: none;
       }
-      .mobile-header{
+
+      .mobile-header {
         display: block;
-        .header-logo-line-mobile{
+
+        .header-logo-line-mobile {
           width: 100vw;
         }
       }
     }
+
     .MainPage {
       .main {
         margin-bottom: -5vw;
+
         .main-back {
           width: 200vw;
           transform: translate(-35%);
           z-index: 0;
           position: relative;
         }
-  
+
         .title-polygon {
           top: 20vw;
           width: 80vw;
-          height: 40vw;
+          height: 45vw;
           padding: 5.5vw 0px 0px 5vw;
-  
+
           span {
             font-size: 7vw;
           }
+
+          .button {
+            font-size: 3.2vw;
+            padding: 0.8vw 1.5vw;
+            margin-top: 2vw;
+            border-radius: 0.6vw;
+          }
         }
-  
+
         .earth-on-hand {
           // display: none;
           top: 50vw;
@@ -718,11 +825,13 @@ body {
           right: 31vw;
         }
       }
-    }  
+    }
+
     .Footer {
-      
+
       .details {
         padding: 5vw 3vw 3vw 3vw;
+
         .footer-logo {
           width: 150px;
         }
@@ -742,50 +851,65 @@ body {
         align-items: flex-start;
         padding: 2.5vw 2.5vw 0px 0px;
         box-sizing: border-box;
+
         .buttons {
           display: none;
         }
-        .menu-button{
+
+        .menu-button {
           display: block;
-          svg{
+
+          svg {
             color: #33a601;
-            &:active{
+
+            &:active {
               color: rgb(0, 0, 0);
             }
           }
+
           // background-color: #2b97f1;
-          
+
         }
       }
 
       .header-logo-line {
         display: none;
       }
-      .mobile-header{
+
+      .mobile-header {
         display: block;
-        .header-logo-line-mobile{
+
+        .header-logo-line-mobile {
           width: 100vw;
         }
       }
     }
+
     .MainPage {
       .main {
         .main-back {
           width: 240vw;
           transform: translate(-45%);
         }
-  
+
         .title-polygon {
           top: 24vw;
           width: 85vw;
-          height: 50vw;
+          height: 55vw;
           padding: 5.5vw 0px 0px 5vw;
-  
+
           span {
             font-size: 9vw;
           }
+
+          .button {
+            font-size: 4.2vw;
+            padding: 0.8vw 1.5vw;
+            margin-top: 2.5vw;
+            border-radius: 0.6vw;
+          }
         }
-  
+
         .earth-on-hand {
           top: 70vw;
           right: 0px;
@@ -798,9 +922,11 @@ body {
         }
       }
     }
+
     .Footer {
       .details {
         padding: 10vw 3vw 3vw 3vw;
+
         .footer-logo {
           width: 150px;
         }
@@ -817,18 +943,18 @@ body {
           width: 240vw;
           transform: translate(-45%);
         }
-  
+
         .title-polygon {
           top: 80px;
           width: 85vw;
-          height: 50vw;
+          height: 55vw;
           padding: 5.5vw 0px 0px 5vw;
-  
+
           span {
             font-size: 9vw;
           }
         }
-  
+
         .earth-on-hand {
           top: 80vw;
           right: 0px;
@@ -845,26 +971,29 @@ body {
 }
 
 @media only screen and (orientation:portrait) {
+
   /* The width is greater than the height */
-  .App{
-    .LoginPage{
-      .login-left{
+  .App {
+    .LoginPage {
+      .login-left {
         display: none;
       }
     }
   }
 }
 
-@media only screen and (max-width: calc( 100vh + 150px )) {
+@media only screen and (max-width: calc(100vh + 150px)) {
+
   /* The width is greater than the height */
-  .App{
-    .LoginPage{
-      .login-left{
+  .App {
+    .LoginPage {
+      .login-left {
         display: none;
       }
     }
-    .SignupPage{
-      .signup-left{
+
+    .SignupPage {
+      .signup-left {
         display: none;
       }
     }
@@ -872,20 +1001,23 @@ body {
 }
 
 @media only screen and (max-height: 400px) {
+
   /* The width is greater than the height */
-  .App{
-    .LoginPage{
-      .right{
-        .center{
-          .input-box{
+  .App {
+    .LoginPage {
+      .right {
+        .center {
+          .input-box {
             padding: 10px;
             margin: 5px 0px;
           }
-          .button{
+
+          .button {
             padding: 10px;
             margin: 5px 0px;
           }
-          span{
+
+          span {
             padding: 5px 0px;
           }
         }
@@ -895,20 +1027,23 @@ body {
 }
 
 @media only screen and (max-height: 640px) {
+
   /* The width is greater than the height */
-  .App{
-    .SignupPage{
-      .right{
-        .center{
-          .input-box{
+  .App {
+    .SignupPage {
+      .right {
+        .center {
+          .input-box {
             padding: 10px;
             margin: 5px 0px;
           }
-          .button{
+
+          .button {
             padding: 10px;
             margin: 5px 0px;
           }
-          span{
+
+          span {
             padding: 5px 0px;
           }
         }

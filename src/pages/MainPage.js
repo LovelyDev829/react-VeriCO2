@@ -17,6 +17,7 @@ function MainPage({ sideBarFlag, setSideBarFlag }) {
           <span>Automated Scope 3</span>
           <span>Emissions</span>
           <span>Quantification</span>
+          <div className='button'>Get Started Now</div>
         </div>
         <img src={earthOnHand} alt="Earth on Hand" className='earth-on-hand' />
         {/* <img src={earthBackHand} alt="Earth back Hand" className='earth-back-hand'/> */}
