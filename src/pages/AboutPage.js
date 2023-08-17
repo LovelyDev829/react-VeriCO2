@@ -60,11 +60,11 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
             </div>
             <div className='bottom'>
               <span className='title'>This plan includes:</span>
-              <span>Unlimited Platform Access 1Yr</span>
-              <span>Automated Scope 3 carbon accounting</span>
-              <span>PDF Report Printout</span>
-              <span>Facilitated Onboarding</span>
-              <span>Email Support</span>
+              <span>- Unlimited Platform Access 1Yr</span>
+              <span>- Automated Scope 3 carbon accounting</span>
+              <span>- PDF Report Printout</span>
+              <span>- Facilitated Onboarding</span>
+              <span>- Email Support</span>
             </div>
           </div>
           <div className='price-box'>
@@ -75,11 +75,11 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
             </div>
             <div className='bottom'>
               <span className='title'>This plan includes:</span>
-              <span>Unlimited Platform Access 1Yr</span>
-              <span>Automated Scope 3 carbon accounting</span>
-              <span>PDF Report Printout</span>
-              <span>Facilitated Onboarding</span>
-              <span>Email Support</span>
+              <span>- Unlimited Platform Access 1Yr</span>
+              <span>- Automated Scope 3 carbon accounting</span>
+              <span>- PDF Report Printout</span>
+              <span>- Facilitated Onboarding</span>
+              <span>- Email Support</span>
             </div>
           </div>
           <div className='price-box'>
@@ -90,11 +90,11 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
             </div>
             <div className='bottom'>
               <span className='title'>This plan includes:</span>
-              <span>Unlimited Platform Access 1Yr</span>
-              <span>Automated Scope 3 carbon accounting</span>
-              <span>PDF Report Printout</span>
-              <span>Facilitated Onboarding</span>
-              <span>Email Support</span>
+              <span>- Unlimited Platform Access 1Yr</span>
+              <span>- Automated Scope 3 carbon accounting</span>
+              <span>- PDF Report Printout</span>
+              <span>- Facilitated Onboarding</span>
+              <span>- Email Support</span>
             </div>
           </div>
         </div>
