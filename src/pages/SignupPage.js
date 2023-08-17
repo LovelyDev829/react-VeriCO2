@@ -22,6 +22,7 @@ function SignupPage() {
                         <input type='phone' placeholder='Phone Number'></input>
                     </div>
                     <div className='input-box'>
+                        <span>Date of Birth</span>
                         <input type='date' placeholder='Date of Birth'></input>
                     </div>
                     <div className='input-box'>
