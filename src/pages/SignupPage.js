@@ -10,7 +10,7 @@ function SignupPage() {
             <img src={signupLeft} alt="Signup Left" className='signup-left' />
             <div className='right'>
                 <div className='center'>
-                    <img src={mainLogo} alt="Main Logo" className='main-logo' />
+                    <img src={mainLogo} alt="Main Logo" className='main-logo' onClick={()=>navigate('/')}/>
                     <span>Fill the form to create a new account.</span>
                     <div className='input-box'>
                         <input type='text' placeholder='Full Name'></input>

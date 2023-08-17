@@ -4,6 +4,10 @@ body {
 
 }
 
+.hidden {
+  display: none;
+}
+
 .App {
   font-family: sans-serif;
   width: 100vw;
@@ -75,6 +79,7 @@ body {
       }
 
       .header-logo {
+        cursor: pointer;
         width: 25vw;
         position: absolute;
         top: -2.5vw;
@@ -142,17 +147,19 @@ body {
           padding: 0.8vw 1.5vw;
           margin-top: 1.5vw;
           border-radius: 0.5vw;
-          background: linear-gradient(233.08deg, rgb(134, 192, 109) 1.8%,rgb(51, 166, 1) 95.5%);
+          background: linear-gradient(233.08deg, rgb(134, 192, 109) 1.8%, rgb(51, 166, 1) 95.5%);
           border: 1px white solid;
           color: white;
           box-shadow: -0.1vw 0.1vw 0.1vw 0.05vw rgba(0, 0, 0, 0.2);
           cursor: pointer;
           user-select: none;
-          &:hover{
+
+          &:hover {
             background: white;
             color: rgb(51, 166, 1);
           }
-          &:active{
+
+          &:active {
             background: rgb(204, 226, 194);
             color: rgb(51, 166, 1);
           }
@@ -269,6 +276,159 @@ body {
     }
   }
 
+  .AboutPage {
+    background-color: white;
+
+    .about-page-image {
+      margin-top: 5vw;
+      width: 100vw;
+      margin-bottom: -5px;
+    }
+
+    .selector {
+      width: 100%;
+      border-bottom: 1px rgb(253, 22, 9) solid;
+
+      .items {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 100px 0px 100px;
+
+        .item {
+          cursor: pointer;
+          user-select: none;
+          padding: 0px 20px;
+          margin: 0px 10px;
+          font-weight: 800;
+          color: rgb(23, 3, 90);
+
+          &.selected {
+            color: rgb(253, 22, 9);
+            border-bottom: 3px rgb(253, 22, 9) solid;
+          }
+        }
+      }
+    }
+
+    .description {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0px 100px 200px 100px;
+
+      .text {
+        padding: 0px 30px;
+        border: 1px rgba(128, 128, 128, 0.37) solid;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          margin: 12px 0px;
+          line-height: 25px;
+        }
+      }
+
+      .pricings {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+        padding-top: 50px;
+
+        .price-box {
+          border: 1px rgba(128, 128, 128, 0.37) solid;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          cursor: pointer;
+          transition-duration: 0.2s;
+          &:hover{
+            box-shadow: 0px 0px 10px 1px rgba(199, 144, 235, 0.5);
+          }
+          &:active{
+            box-shadow: inset 0px 0px 10px 0.5px rgba(199, 144, 235, 0.5);
+          }
+          &:nth-child(2){
+            .top{
+              svg{
+                fill: rgb(112,196,126);
+              }
+              .title{
+                color: rgb(112,196,126);
+              }
+            }
+            &:hover{
+              box-shadow: 0px 0px 10px 1px rgba(112,196,126, 0.5);
+            }
+            &:active{
+              box-shadow: inset 0px 0px 10px 0.5px rgba(112,196,126, 0.5);
+            }
+          }
+          &:nth-child(3){
+            .top{
+              svg{
+                fill: rgb(99,144,222);
+              }
+              .title{
+                color: rgb(99,144,222);
+              }
+            }
+            &:hover{
+              box-shadow: 0px 0px 10px 1px rgba(99,144,222, 0.5);
+            }
+            &:active{
+              box-shadow: inset 0px 0px 10px 0.5px rgba(99,144,222, 0.5);
+            }
+          }
+          .top {
+            display: flex;
+            flex-direction: column;
+            // padding: 10px;
+            text-align: center;
+            border-bottom: 1px rgba(128, 128, 128, 0.37) solid;
+
+            svg {
+              width: 40px;
+              height: 40px;
+              margin: auto;
+              padding: 10px;
+              fill: rgb(198, 144, 235);
+            }
+
+            .title {
+              font-size: 20px;
+              color: rgb(198, 144, 235);
+            }
+
+            .price {
+              font-size: 22px;
+              padding: 10px 0px 20px 0px;
+            }
+          }
+
+          .bottom {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            span {
+              font-size: 12px;
+              line-height: 25px;
+            }
+
+            .title {
+              font-size: 15px;
+              font-weight: 600;
+              padding-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .Footer {
     z-index: 5;
     position: relative;
@@ -291,6 +451,7 @@ body {
         margin: auto;
         width: 15vw;
         user-select: none;
+        cursor: pointer;
       }
 
       .icons {
@@ -394,6 +555,7 @@ body {
         .main-logo {
           width: 50%;
           margin: auto;
+          cursor: pointer;
         }
 
         .input-box {
@@ -500,6 +662,7 @@ body {
         .main-logo {
           width: 50%;
           margin: auto;
+          cursor: pointer;
         }
 
         .input-box {
@@ -672,6 +835,7 @@ body {
 
         .title-polygon {
           top: 110px;
+
           span {
             font-size: 4vw;
           }
@@ -682,6 +846,13 @@ body {
           right: -6vw;
           width: 64vw;
         }
+      }
+    }
+
+    .AboutPage {
+      .about-page-image {
+        margin-top: 50px;
+        width: 100vw;
       }
     }
 
@@ -721,6 +892,31 @@ body {
       .main {
         .title-polygon {
           padding: 4vw 0px 0px 5vw;
+        }
+      }
+    }
+
+    .AboutPage {
+
+      .selector {
+
+        .items {
+          padding: 20px 50px 0px 50px;
+
+          .item {
+            padding: 0px 20px;
+            margin: 0px 10px;
+          }
+        }
+      }
+
+      .description {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0px 50px 100px 50px;
+
+        .text {
+          padding: 0px 30px;
         }
       }
     }
@@ -828,6 +1024,25 @@ body {
       }
     }
 
+    .AboutPage {
+      .about-page-image {
+        margin-top: 5vw;
+        width: 200vw;
+        transform: translate(-35%);
+
+        &.two {
+          transform: translate(-15%);
+        }
+      }
+      .description {  
+        .pricings {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
     .Footer {
 
       .details {
@@ -835,6 +1050,28 @@ body {
 
         .footer-logo {
           width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    .AboutPage {
+
+      .selector {
+
+        .items {
+          padding: 20px 20px 0px 20px;
+        }
+      }
+
+      .description {
+        padding: 0px 20px 100px 20px;
+
+        .text {
+          padding: 0px 10px;
         }
       }
     }
@@ -921,6 +1158,16 @@ body {
           top: 84vw;
           right: 35vw;
         }
+      }
+    }
+
+    .AboutPage {
+      background-color: white;
+
+      .about-page-image {
+        margin-top: 25px;
+        width: 200vw;
+        transform: translate(-35%);
       }
     }
 

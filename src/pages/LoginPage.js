@@ -10,7 +10,7 @@ function LoginPage() {
       <img src={loginLeft} alt="Login Left" className='login-left' />
       <div className='right'>
         <div className='center'>
-          <img src={mainLogo} alt="Main Logo" className='main-logo' />
+          <img src={mainLogo} alt="Main Logo" className='main-logo' onClick={()=>navigate('/')}/>
           <span>Enter your email and password to login</span>
           <div className='input-box'>
             <input type='email' placeholder='Email Address'></input>
