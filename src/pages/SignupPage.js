@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 function SignupPage() {
     const navigate = useNavigate();
-    const [dateOfBirth, setDateOfBirth] = useState(null)
+    // const [dateOfBirth, setDateOfBirth] = useState(null)
+    const [fake, setfake] = useState(true)
+    const [fake1, setfake1] = useState(true)
     return (
-        <div className='SignupPage'>
+        <div className='SignupPage' onClick={()=>setfake1(true)}>
             <img src={signupLeft} alt="Signup Left" className='signup-left' />
             <div className='right'>
                 <div className='center'>
@@ -22,9 +24,12 @@ function SignupPage() {
                     <div className='input-box'>
                         <input type='phone' placeholder='Phone Number'></input>
                     </div>
-                    <div className='input-box'>
-                        <span className={dateOfBirth?'hidden':''}>Date of Birth</span>
-                        <input type='date' placeholder='Date of Birth' onChange={(e)=>setDateOfBirth(e.target.value)}></input>
+                    <div className='input-box' onMouseOver={()=>setfake(false)} onMouseLeave={()=>setfake(true)}>
+                        <input placeholder="Date of Birth" type={fake && fake1 ? "text": "date"}
+                        onClick={(e)=>{
+                            e.stopPropagation();
+                            setfake1(false)                            
+                        }}></input>
                     </div>
                     <div className='input-box'>
                         <input type='password' placeholder='Password'></input>
