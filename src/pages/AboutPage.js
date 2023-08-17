@@ -20,7 +20,7 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
       }
       <div className='selector'>
         <div className='items'>
-          <div className={itemNumber === 0 ? 'item selected' : 'item'} onClick={() => setItemNumber(0)}>OverView</div>
+          <div className={itemNumber === 0 ? 'item selected' : 'item'} onClick={() => setItemNumber(0)}>Overview</div>
           <div className={itemNumber === 1 ? 'item selected' : 'item'} onClick={() => setItemNumber(1)}>Plans and Pricing</div>
         </div>
       </div>
