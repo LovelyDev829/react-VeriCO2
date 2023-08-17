@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import signupLeft from '../assets/images/signup-left.png'
 import mainLogo from '../assets/images/header-logo.png'
 import { useNavigate } from 'react-router-dom';
 
 function SignupPage() {
     const navigate = useNavigate();
+    const [dateOfBirth, setDateOfBirth] = useState(null)
     return (
         <div className='SignupPage'>
             <img src={signupLeft} alt="Signup Left" className='signup-left' />
@@ -22,8 +23,8 @@ function SignupPage() {
                         <input type='phone' placeholder='Phone Number'></input>
                     </div>
                     <div className='input-box'>
-                        <span>Date of Birth</span>
-                        <input type='date' placeholder='Date of Birth'></input>
+                        <span className={dateOfBirth?'hidden':''}>Date of Birth</span>
+                        <input type='date' placeholder='Date of Birth' onChange={(e)=>setDateOfBirth(e.target.value)}></input>
                     </div>
                     <div className='input-box'>
                         <input type='password' placeholder='Password'></input>
