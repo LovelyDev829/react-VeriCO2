@@ -11,7 +11,7 @@ import { ReactComponent as BusinessIcon3 } from '../assets/svg/business-3.svg'
 function AboutPage({ sideBarFlag, setSideBarFlag }) {
   const [itemNumber, setItemNumber] = useState(0)
   return (
-    <div className='AboutPage'>
+    <div className='AboutPage' onClick={() => setSideBarFlag(false)}>
       <Header sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag} />
       {
         itemNumber === 0 ?

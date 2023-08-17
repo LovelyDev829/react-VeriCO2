@@ -153,6 +153,7 @@ body {
           box-shadow: -0.1vw 0.1vw 0.1vw 0.05vw rgba(0, 0, 0, 0.2);
           cursor: pointer;
           user-select: none;
+          z-index: 20;
 
           &:hover {
             background: white;
@@ -172,6 +173,8 @@ body {
         right: -6vw;
         width: 64vw;
         z-index: 5;
+        pointer-events: none;
+        user-select: none;
       }
 
       .earth-back-hand {
@@ -1159,7 +1162,7 @@ body {
 
         .title-polygon {
           top: 24vw;
-          width: 85vw;
+          width: 95vw;
           height: 57vw;
           padding: 5.5vw 0px 0px 5vw;
 
@@ -1221,7 +1224,7 @@ body {
 
         .title-polygon {
           top: 80px;
-          width: 85vw;
+          width: 95vw;
           height: 57vw;
           padding: 5.5vw 0px 0px 5vw;
 

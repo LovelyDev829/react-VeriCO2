@@ -16,7 +16,6 @@ function Header({ sideBarFlag, setSideBarFlag }) {
                     <div className='button' onClick={()=>navigate('/signup')}>Sign up</div>
                 </div>
                 <div className='menu-button' onClick={(e) => {
-                    console.log("first");
                     e.stopPropagation();
                     setSideBarFlag(!sideBarFlag);
                 }}>
@@ -28,8 +27,8 @@ function Header({ sideBarFlag, setSideBarFlag }) {
                 <img src={headerLogo} alt="Header Logo" className='header-logo' onClick={()=>navigate('/')}/>
                 <div className='buttons'>
                     <span onClick={()=>navigate('/about')}>About</span>
-                    <span>Calculation & Display</span>
-                    <span>Contact Us</span>
+                    <span onClick={()=>navigate('/calculation')}>Calculation & Display</span>
+                    <span onClick={()=>navigate('/contact-us')}>Contact Us</span>
                 </div>
             </div>
             <div className='mobile-header'>

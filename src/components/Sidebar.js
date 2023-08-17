@@ -7,10 +7,20 @@ function Sidebar({ sideBarFlag, setSideBarFlag }) {
         <div className={sideBarFlag ? 'Sidebar show' : 'Sidebar'} onClick={(e) => { e.stopPropagation() }}>
             <div className='item' onClick={() => {
                 setSideBarFlag(false)
+                navigate('/')
+            }}>Home</div>
+            <div className='item' onClick={() => {
+                setSideBarFlag(false)
                 navigate('/about')
             }}>About</div>
-            <div className='item' onClick={() => setSideBarFlag(false)}>Calculation & Display</div>
-            <div className='item' onClick={() => setSideBarFlag(false)}>Contact Us</div>
+            <div className='item' onClick={() => {
+                setSideBarFlag(false);
+                navigate('/calculation')
+            }}>Calculation & Display</div>
+            <div className='item' onClick={() => {
+                setSideBarFlag(false);
+                navigate('/contact-us')
+            }}>Contact Us</div>
             <div className='item' onClick={() => {
                 setSideBarFlag(false);
                 navigate('/signup')
