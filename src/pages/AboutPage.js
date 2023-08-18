@@ -27,14 +27,18 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
       </div>
       <div className={itemNumber === 0 ? 'description' : 'hidden'}>
         <div className='text'>
-          <span className='title'>Overview</span>
-          <span><b>VeriCO₂</b> is a cutting-edge proprietary technology that specialises in the efficient quantification of scope 3 emissions.
-            By automating the retrieval of emission factors and consolidating scope 1 and 2 emissions from suppliers, it provides
-            a comprehensive and transparent view of a company's entire scope 3 emissions profile.
-            Along with detailed data, <b>VeriCO₂</b> offers aesthetically pleasing visualisations that enable users to grasp the information easily.</span>
-            
-          <div className='image-card'>
-            <img src={exampleScreenshot} alt="Example Screenshot" className='example-screenshot' />
+          <div className='row'>
+            <div className='column'>
+              <span className='title'>Overview</span>
+              <span><b>VeriCO₂</b> is a cutting-edge proprietary technology that specialises in the efficient quantification of scope 3 emissions.
+                By automating the retrieval of emission factors and consolidating scope 1 and 2 emissions from suppliers, it provides
+                a comprehensive and transparent view of a company's entire scope 3 emissions profile.
+                Along with detailed data, <b>VeriCO₂</b> offers aesthetically pleasing visualisations that enable users to grasp the information easily.</span>
+
+            </div>
+            <div className='image-card'>
+              <img src={exampleScreenshot} alt="Example Screenshot" className='example-screenshot' />
+            </div>
           </div>
           <span className='title'>Phase 2</span>
           <span>In its ambitious Phase 2 rollout, <b>VeriCO₂</b> is set to become an essential tool in the fight against greenwashing.
@@ -54,7 +58,7 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
         <div className='pricings'>
           <div className='price-box'>
             <div className='top'>
-              <BusinessIcon1/>
+              <BusinessIcon1 />
               <span className='title'>Corporates</span>
               <span className='price'>$ 2,889</span>
             </div>
@@ -69,7 +73,7 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
           </div>
           <div className='price-box'>
             <div className='top'>
-              <BusinessIcon2/>
+              <BusinessIcon2 />
               <span className='title'>Consultants</span>
               <span className='price'>$ 5,000</span>
             </div>
@@ -84,7 +88,7 @@ function AboutPage({ sideBarFlag, setSideBarFlag }) {
           </div>
           <div className='price-box'>
             <div className='top'>
-              <BusinessIcon3/>
+              <BusinessIcon3 />
               <span className='title'>Regulatory Bodies</span>
               <span className='price'>$ 30,000</span>
             </div>

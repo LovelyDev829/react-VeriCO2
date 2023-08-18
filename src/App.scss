@@ -347,8 +347,18 @@ body {
           margin: 20px auto;
 
           .example-screenshot {
-            max-width: 700px;
-            width: 50vw;
+            max-width: 600px;
+            width: 60vw;
+          }
+        }
+        .row{
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          gap: 50px;
+          .column{
+            display: flex;
+            flex-direction: column;
           }
         }
       }
@@ -466,6 +476,8 @@ body {
 
   .CalculationPage {
     background-color: white;
+    background-image: url(./assets/images/contact-us-back.png);
+    background-size: cover;
 
     .cluster {
       max-width: 1200px;
@@ -486,6 +498,7 @@ body {
         padding-top: 20px;
 
         .box {
+          background-color: white;
           display: flex;
           flex-direction: column;
           box-shadow: 0vw 0vw 0.5vw 0.1vw rgba(0, 0, 0, 0.2);
@@ -667,7 +680,15 @@ body {
           }
 
           .button.red {
-            background-color: rgb(246, 78, 5);
+            background-color: rgb(224, 81, 19);
+
+            &:hover {
+              background-color: rgb(255, 77, 0);
+            }
+
+            &:active {
+              background-color: rgb(224, 81, 19);
+            }
           }
         }
 
@@ -675,6 +696,123 @@ body {
           display: flex;
           flex-direction: column;
           gap: 20px;
+        }
+      }
+    }
+  }
+
+  .ContactUsPage {
+    background-image: url(./assets/images/contact-us-back.png);
+    background-size: cover;
+    // height: 700px;
+    
+    .main {
+      position: relative;
+
+      .contact-us-back {
+        width: 100vw;
+      }
+
+      .card-container {
+        padding: 16vw 100px;
+        width: 100vw;
+        box-sizing: border-box;
+
+        .card {
+          max-width: 1200px;
+          margin: auto;
+          background-color: white;
+          padding: 30px;
+          border-radius: 5px;
+          box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.205);
+          display: flex;
+          flex-direction: column;
+
+          .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 50px;
+
+            .left {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              .title {
+                text-align: center;
+                font-size: x-large;
+                font-weight: 800;
+                padding-bottom: 10px;
+              }
+
+              .item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                span{
+                  width: max-content;
+                }
+                .sub-title {
+                  font-size: large;
+                  font-weight: 600;
+                  padding: 0px 10px;
+                }
+              }
+            }
+
+            .right {
+              max-width: 600px;
+              width: 100%;
+              .input-box {
+                padding: 15px 20px;
+                border: 1px black solid;
+                border-radius: 5px;
+                margin: 10px 0px;
+                display: flex;
+                flex-direction: row;
+
+                input {
+                  width: 100%;
+                  border: none;
+                  outline: none;
+                  font-size: 15px;
+                  background-color: rgba(255, 255, 255, 0);
+                }
+
+                textarea {
+                  width: 100%;
+                  height: 100px;
+                  border: none;
+                  outline: none;
+                  font-size: 15px;
+                  background-color: rgba(255, 255, 255, 0);
+                  font-family: sans-serif;
+                }
+              }
+
+              .button {
+                background-color: rgb(110, 191, 73);
+                padding: 10px 20px;
+                // width: 100%;
+                margin: 10px auto;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                user-select: none;
+
+                &:hover {
+                  background-color: rgb(51, 166, 1);
+                }
+
+                &:active {
+                  background-color: rgb(110, 191, 73);
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -1033,6 +1171,34 @@ body {
         }
       }
     }
+    .AboutPage {  
+      .description {  
+        .text {
+          padding: 0px 30px;
+          border: 1px rgba(128, 128, 128, 0.37) solid;
+          display: flex;
+          flex-direction: column;
+  
+          .image-card {
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            height: fit-content;
+            margin: 20px auto;
+  
+            .example-screenshot {
+              max-width: 600px;
+              width: 300px;
+            }
+          }
+          .row{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1113,12 +1279,20 @@ body {
         margin-top: 50px;
         width: 100vw;
       }
+      .description {  
+        .text {
+          .row{
+            align-items: flex-start;
+          }
+        }
+      }
     }
 
     .CalculationPage {
 
       .cluster {
         padding: 100px 100px 200px 100px;
+
         .main {
           flex-direction: column;
 
@@ -1203,17 +1377,31 @@ body {
               width: 80vw;
             }
           }
+          .row{
+            flex-direction: column;
+            gap: 0px;
+          }
         }
       }
     }
 
     .CalculationPage {
       background-color: white;
-  
+
       .cluster {
         max-width: 1200px;
         margin: auto;
         padding: 100px 30px 200px 30px;
+      }
+    }
+
+    .ContactUsPage {
+      
+      .main {
+  
+        .card-container {
+          padding: 150px 50px;
+        }
       }
     }
 
@@ -1342,11 +1530,39 @@ body {
 
     .CalculationPage {
       background-color: white;
-  
+
       .cluster {
         max-width: 1200px;
         margin: auto;
         padding: 20vw 30px 200px 30px;
+      }
+    }
+
+    .ContactUsPage {
+      
+      .main {
+  
+        .card-container {
+          padding: 150px 20px;
+          .card {
+            flex-direction: column;
+            width: fit-content;
+            padding: 10px;
+  
+            .main {
+              flex-direction: column;
+              gap: 10px;
+  
+              .left {
+                margin: auto;
+  
+                .item {
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -1382,9 +1598,10 @@ body {
         }
       }
     }
+
     .CalculationPage {
       background-color: white;
-  
+
       .cluster {
         max-width: 1200px;
         margin: auto;
@@ -1493,6 +1710,33 @@ body {
 
         .footer-logo {
           width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .App {
+    .ContactUsPage {      
+      .main {
+        .card-container {
+          .card {
+            .main {  
+              .left {  
+                .item {  
+                  span{
+                    font-size: x-small;
+                  }
+                  .sub-title {
+                    font-size: small;
+                    font-weight: 600;
+                    padding: 0px 5px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

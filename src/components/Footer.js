@@ -2,9 +2,9 @@ import React from 'react'
 import footerBackTop from '../assets/images/footer-back-top.png'
 import footerLogo from '../assets/images/footer-logo.png'
 
-import { ReactComponent as FacebookIcon } from '../assets/svg/facebook.svg'
-import { ReactComponent as TwitterIcon } from '../assets/svg/twitter.svg'
-import { ReactComponent as InstagramIcon } from '../assets/svg/instagram.svg'
+// import { ReactComponent as FacebookIcon } from '../assets/svg/facebook.svg'
+// import { ReactComponent as TwitterIcon } from '../assets/svg/twitter.svg'
+// import { ReactComponent as InstagramIcon } from '../assets/svg/instagram.svg'
 import { ReactComponent as LinkedinIcon } from '../assets/svg/linkedin.svg'
 import { ReactComponent as MailIcon } from '../assets/svg/mail.svg'
 import { useNavigate } from 'react-router-dom';
@@ -17,9 +17,9 @@ function Footer() {
             <div className='details'>
                 <img src={footerLogo} alt="Footer Logo" className='footer-logo' onClick={()=>navigate('/')}/>
                 <div className='icons'>
-                    <FacebookIcon/>
-                    <TwitterIcon/>
-                    <InstagramIcon/>
+                    {/* <FacebookIcon/> */}
+                    {/* <TwitterIcon/> */}
+                    {/* <InstagramIcon/> */}
                     <LinkedinIcon/>
                     <MailIcon/>
                 </div>
