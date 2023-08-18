@@ -1,8 +1,10 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom';
 
 function CalculationPage({ sideBarFlag, setSideBarFlag }) {
+    const navigate = useNavigate();
     return (
         <div className='CalculationPage' onClick={() => setSideBarFlag(false)}>
             <Header sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag} />
@@ -117,7 +119,7 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                                 <span className='right'>46%</span>
                             </div>
                         </div>
-                        <div className='button red'>Emission display</div>
+                        <div className='button red' onClick={()=>navigate('/display')} >Emission display</div>
                     </div>
                 </div>
             </div>
