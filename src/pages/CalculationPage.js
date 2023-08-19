@@ -12,27 +12,26 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                 <span className='title'>Scope 3 Emission Performance (t of CO₂)</span>
                 <div className='main'>
                     <div className='box'>
-                        <span className='title'>Category</span>
+                        <span className='title'>15 Categories</span>
                         <span className='selected'>• Purchased Goods and Services</span>
                         <span>• Capital Goods</span>
-                        <span>• Fuel- and .... Scope 1 or Scope 2</span>
-                        <span>• Upstream .... Distribution</span>
+                        <span>• Fuel- and Energy-Related Activities Not Included in Scope 1 or Scope 2</span>
+                        <span>• Upstream Transportation  and Distribution</span>
                         <span>• Waste Generated in Operations</span>
                         <span>• Business Travel</span>
-                        <span>• Capital Goods</span>
-                        <span>• Fuel- and .... Scope 1 or Scope 2</span>
-                        <span>• Upstream .... Distribution</span>
-                        <span>• Waste Generated in Operations</span>
-                        <span>• Business Travel</span>
-                        <span>• Capital Goods</span>
-                        <span>• Fuel- and .... Scope 1 or Scope 2</span>
-                        <span>• Upstream .... Distribution</span>
-                        <span>• Waste Generated in Operations</span>
-                        <span>• Business Travel</span>
+                        <span>• Employee Commuting</span>
+                        <span>• Upstream Leased Assets</span>
+                        <span>• Downstream Transportation  and Distribution</span>
+                        <span>• Processing of Sold Products</span>
+                        <span>• Use of Sold Products</span>
+                        <span>• End-of-Life Treatment  of Sold Products</span>
+                        <span>• Downstream Leased Assets</span>
+                        <span>• Franchises</span>
+                        <span>• Investments</span>
                     </div>
                     <div className='center'>
                         <div className='box'>
-                            <span className='title'>Method</span>
+                            <span className='title'>Methods for category 1</span>
                             <span className='selected'>• Supplier-specific method</span>
                             <span>• Hybrid method</span>
                             <span>• Average-data method</span>

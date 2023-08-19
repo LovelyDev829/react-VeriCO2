@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../components/Header'
-import { ReactComponent as HomeIcon } from '../assets/svg/home.svg'
-import { ReactComponent as PhoneIcon } from '../assets/svg/phone.svg'
-import { ReactComponent as MailIcon } from '../assets/svg/mail.svg'
-import { ReactComponent as LinkIcon } from '../assets/svg/link.svg'
+// import { ReactComponent as HomeIcon } from '../assets/svg/home.svg'
+// import { ReactComponent as PhoneIcon } from '../assets/svg/phone.svg'
+// import { ReactComponent as MailIcon } from '../assets/svg/mail.svg'
+// import { ReactComponent as LinkIcon } from '../assets/svg/link.svg'
 import Footer from '../components/Footer'
 
 function ContactUsPage({ sideBarFlag, setSideBarFlag }) {
@@ -15,7 +15,8 @@ function ContactUsPage({ sideBarFlag, setSideBarFlag }) {
         <div className='card-container'>
           <div className='card'>
             <div className='main'>
-              <div className='left'>
+
+              {/* <div className='left'>
                 <span className='title'>Contact Us</span>
                 <div className='item'>
                   <HomeIcon />
@@ -37,8 +38,9 @@ function ContactUsPage({ sideBarFlag, setSideBarFlag }) {
                   <span className='sub-title'>Website</span>
                   <span className='description'>www.verico2.com</span>
                 </div>
-              </div>
+              </div> */}
               <div className='right'>
+              <span className='title'>We'll get back to you soon.</span>
                 <div className='input-box'>
                   <input type='text' placeholder='Full Name'></input>
                 </div>
@@ -57,7 +59,7 @@ function ContactUsPage({ sideBarFlag, setSideBarFlag }) {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

@@ -12,7 +12,7 @@ function Sidebar({ sideBarFlag, setSideBarFlag }) {
             <div className='item' onClick={() => {
                 setSideBarFlag(false)
                 navigate('/about')
-            }}>About</div>
+            }}>About Us</div>
             <div className='item' onClick={() => {
                 setSideBarFlag(false);
                 navigate('/calculation')
