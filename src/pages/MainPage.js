@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
-import mainBack from '../assets/images/main-back.jpg'
+// import mainBack from '../assets/images/main-back.jpg'
+import mainBack from '../assets/images/co2-Recovered4.png'
 // import earthOnHand from '../assets/images/earth-on-hand.png'
 import earthOnly from '../assets/images/earth-only.png'
 import coTwoBubble from '../assets/images/co2-bubble.png'
