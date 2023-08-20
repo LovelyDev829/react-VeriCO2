@@ -1,6 +1,6 @@
 import React from 'react'
 // import headerLine from '../assets/images/header-line.png'
-import headerLine from '../assets/images/Group 14.png'
+import headerLine from '../assets/images/Group 16.png'
 import headerLogo from '../assets/images/header-logo.png'
 import headerLogoLineMobile from '../assets/images/header-logo-line-mobile.png'
 import { ReactComponent as MenuIcon } from '../assets/svg/menu.svg'
