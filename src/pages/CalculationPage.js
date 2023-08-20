@@ -45,7 +45,7 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                                         <th>Purchased good</th>
                                         <th>Supplier</th>
                                         <th>Quantities purchased(kg)</th>
-                                        <th>Surpplier-specific emission factor(kgco2/kg)</th>
+                                        <th>Surpplier-specific(kgco2/kg)</th>
                                     </tr>
                                     <tr>
                                         <td>Cement</td>
@@ -79,7 +79,7 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                                     </tr>
                                 </table>
                             </div>
-                            <div className='button'>Start Calculation</div>
+                            <div className='button'>Upload Data</div>
                         </div>
                     </div>
                     <div className='box'>
@@ -118,11 +118,12 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                                 <span className='right'>46%</span>
                             </div>
                         </div>
-                        <div className='button red' onClick={()=>navigate('/display')} >Emission display</div>
+                        <div className='button'>Start Calculation</div>
+                        <div className='button red' onClick={() => navigate('/display')} >Emission display</div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

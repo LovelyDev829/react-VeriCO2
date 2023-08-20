@@ -1,5 +1,6 @@
 import React from 'react'
-import headerLine from '../assets/images/header-line.png'
+// import headerLine from '../assets/images/header-line.png'
+import headerLine from '../assets/images/Group 14.png'
 import headerLogo from '../assets/images/header-logo.png'
 import headerLogoLineMobile from '../assets/images/header-logo-line-mobile.png'
 import { ReactComponent as MenuIcon } from '../assets/svg/menu.svg'
@@ -29,6 +30,7 @@ function Header({ sideBarFlag, setSideBarFlag }) {
                     <span onClick={()=>navigate('/about')}>About Us</span>
                     <span onClick={()=>navigate('/calculation')}>Calculation & Display</span>
                     <span onClick={()=>navigate('/contact-us')}>Contact Us</span>
+                    <span onClick={()=>navigate('/')}>Testimonials</span>
                 </div>
             </div>
             <div className='mobile-header'>

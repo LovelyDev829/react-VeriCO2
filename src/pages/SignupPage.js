@@ -6,19 +6,21 @@ import axios from 'axios';
 
 function SignupPage({SERVER_URL}) {
     const navigate = useNavigate();
-    const [fake, setfake] = useState(true)
-    const [fake1, setfake1] = useState(true)
+    // const [fake, setfake] = useState(true)
+    // const [fake1, setfake1] = useState(true)
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
-    const [date, setDate] = useState('')
+    const [consultant, setConsultant] = useState('')
+    // const [date, setDate] = useState('')
     const [password, setPassword] = useState('')
     const [company, setCompany] = useState('')
 
     const [errorMessage, setErrorMessage] = useState('')
     return (
-        <div className='SignupPage' onClick={() => setfake1(true)}>
+        // <div className='SignupPage' onClick={() => setfake1(true)}>
+        <div className='SignupPage'>
             <img src={signupLeft} alt="Signup Left" className='signup-left' />
             <div className='right'>
                 <div className='center'>
@@ -31,16 +33,19 @@ function SignupPage({SERVER_URL}) {
                         <input type='email' placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     </div>
                     <div className='input-box'>
-                        <input type='phone' placeholder='Phone Number' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+                        <input type='text' placeholder='Phone Number' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
                     </div>
-                    <div className='input-box' onMouseOver={() => setfake(false)} onMouseLeave={() => setfake(true)}>
+                    <div className='input-box'>
+                        <input type='consultant' placeholder='Consultant' value={consultant} onChange={(e) => setConsultant(e.target.value)}></input>
+                    </div>
+                    {/* <div className='input-box' onMouseOver={() => setfake(false)} onMouseLeave={() => setfake(true)}>
                         <input placeholder="Date of Birth" type={fake && fake1 ? "text" : "date"}
                             value={date} onChange={(e) => setDate(e.target.value)}
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setfake1(false)
                             }}></input>
-                    </div>
+                    </div> */}
                     <div className='input-box'>
                         <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
                     </div>
@@ -52,7 +57,8 @@ function SignupPage({SERVER_URL}) {
                         if (name === '') setErrorMessage('Please type Full Name.')
                         else if (email === '') setErrorMessage('Please type Email Address.')
                         else if (phone === '') setErrorMessage('Please type Phone Number.')
-                        else if (date === '') setErrorMessage('Please choose Date of Birth.')
+                        else if (consultant === '') setErrorMessage('Please type Consultant.')
+                        // else if (date === '') setErrorMessage('Please choose Date of Birth.')
                         else if (password === '') setErrorMessage('Please type Password.')
                         else if (company === '') setErrorMessage('Please type Company Name.')
                         else {
@@ -61,7 +67,8 @@ function SignupPage({SERVER_URL}) {
                                 name: name,
                                 password: password,
                                 email: email,
-                                birthday: date,
+                                consultant: consultant,
+                                // birthday: date,
                                 phoneNumber: phone,
                                 companyName: company
                             }

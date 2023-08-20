@@ -53,6 +53,7 @@ body {
           cursor: pointer;
           user-select: none;
           background-color: rgb(51, 166, 1);
+          // background-color: blue;
           transition-duration: 0.1s;
 
           &:last-child {
@@ -151,7 +152,8 @@ body {
           padding: 0.8vw 1.5vw;
           margin-top: 1.5vw;
           border-radius: 0.5vw;
-          background: linear-gradient(233.08deg, rgb(134, 192, 109) 1.8%, rgb(51, 166, 1) 95.5%);
+          // background: linear-gradient(233.08deg, rgb(134, 192, 109) 1.8%, rgb(51, 166, 1) 95.5%);
+          background: linear-gradient(233.08deg, #58a9ec 1.8%, #008cff 95.5%);
           border: 1px white solid;
           color: white;
           box-shadow: -0.1vw 0.1vw 0.1vw 0.05vw rgba(0, 0, 0, 0.2);
