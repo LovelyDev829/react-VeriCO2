@@ -1213,6 +1213,12 @@ body {
           color: rgb(51, 166, 1);
           padding: 10px 0px;
 
+          &:nth-child(2){
+            padding: 10px 0px 0px 0px;
+          }
+          &:nth-child(3){
+            padding: 0px 0px 10px 0px;
+          }
           &:last-child {
             cursor: pointer;
             user-select: none;
