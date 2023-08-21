@@ -4,7 +4,7 @@ import mainLogo from '../assets/images/header-logo.png'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function SignupPage({SERVER_URL}) {
+function SignupPage({ SERVER_URL }) {
     const navigate = useNavigate();
     // const [fake, setfake] = useState(true)
     // const [fake1, setfake1] = useState(true)
@@ -36,7 +36,12 @@ function SignupPage({SERVER_URL}) {
                         <input type='text' placeholder='Phone Number' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
                     </div>
                     <div className='input-box'>
-                        <input type='consultant' placeholder='Consultant' value={consultant} onChange={(e) => setConsultant(e.target.value)}></input>
+                        {/* <input type='consultant' placeholder='Consultant' value={consultant} onChange={(e) => setConsultant(e.target.value)}></input> */}
+                        <select name="Consultant" onChange={(e)=>setConsultant(e.target.value)}>
+                            <option value="corporate">Corporate</option>
+                            <option value="consultant">Consultant</option>
+                            <option value="regulatory body">Regulatory body</option>
+                        </select>
                     </div>
                     {/* <div className='input-box' onMouseOver={() => setfake(false)} onMouseLeave={() => setfake(true)}>
                         <input placeholder="Date of Birth" type={fake && fake1 ? "text" : "date"}
