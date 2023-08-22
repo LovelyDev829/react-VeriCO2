@@ -6,15 +6,28 @@ import headerLogoLineMobile from '../assets/images/header-logo-line-mobile.png'
 import { ReactComponent as MenuIcon } from '../assets/svg/menu.svg'
 import Sidebar from './Sidebar'
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 function Header({ sideBarFlag, setSideBarFlag }) {
     const navigate = useNavigate();
+    const cookies = new Cookies();
+    const token = cookies.get('token')
     return (
         <div className='Header'>
             <div className='white-area'>
                 <div className='buttons'>
-                    <div className='button' onClick={()=>navigate('/login')}>Login</div>
-                    <div className='button' onClick={()=>navigate('/signup')}>Sign up</div>
+                    {
+                        token ?
+                            <div className='button' onClick={() => {
+                                cookies.set('token', null, { path: '/' });
+                                navigate('/login')
+                            }}>Logout</div>
+                            :
+                            <>
+                                <div className='button' onClick={() => navigate('/login')}>Login</div>
+                                <div className='button' onClick={() => navigate('/signup')}>Sign up</div>
+                            </>
+                    }
                 </div>
                 <div className='menu-button' onClick={(e) => {
                     e.stopPropagation();
@@ -25,12 +38,13 @@ function Header({ sideBarFlag, setSideBarFlag }) {
             </div>
             <div className='header-logo-line'>
                 <img src={headerLine} alt="Header Line" className='header-line' />
-                <img src={headerLogo} alt="Header Logo" className='header-logo' onClick={()=>navigate('/')}/>
+                <img src={headerLogo} alt="Header Logo" className='header-logo' onClick={() => navigate('/')} />
                 <div className='buttons'>
-                    <span onClick={()=>navigate('/about')}>About Us</span>
-                    <span onClick={()=>navigate('/calculation')}>Calculation & Display</span>
-                    <span onClick={()=>navigate('/contact-us')}>Contact Us</span>
-                    <span onClick={()=>navigate('/')}>Testimonials</span>
+                    <span onClick={() => navigate('/about')}>About Us</span>
+                    <span onClick={() => navigate('/calculation')}>Calculation & Display</span>
+                    <span onClick={() => navigate('/contact-us')}>Contact Us</span>
+                    <span onClick={() => navigate('/')}>Testimonials</span>
+                    <span onClick={() => navigate('/')}>Articles</span>
                 </div>
             </div>
             <div className='mobile-header'>

@@ -24,7 +24,7 @@ function Footer() {
                     <MailIcon/>
                 </div>
                 <span className='term'>National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</span>
-                <span className='term'>All right Reversed. Sunlimetech” by changing it to “© 2023 VeriCO₂. All rights reserved.</span>
+                <span className='term'>© 2023 VeriCO₂. All rights reserved.</span>
             </div>            
         </div>
     )

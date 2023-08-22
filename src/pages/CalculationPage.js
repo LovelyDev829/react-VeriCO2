@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'universal-cookie';
+import axios from 'axios';
 
-function CalculationPage({ sideBarFlag, setSideBarFlag }) {
+function CalculationPage({ sideBarFlag, setSideBarFlag, SERVER_URL }) {
     const navigate = useNavigate();
+    
+    const [listData, setListData] = useState([])
+    const [category, setCategory] = useState(0)
+    const [method, setMethod] = useState(0)
+    useEffect(()=>{
+        const cookies = new Cookies();
+        if(!cookies.get('token')){
+            navigate('/login');
+        }
+        else{
+            axios.get(SERVER_URL+'/calculation')
+            .then(res => {
+            //   console.log(res.data)
+              setListData([...res.data])
+              setCategory(0)
+              setMethod(0)
+            })
+        }
+    },[SERVER_URL, navigate])
     return (
         <div className='CalculationPage' onClick={() => setSideBarFlag(false)}>
             <Header sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag} />
@@ -13,70 +34,72 @@ function CalculationPage({ sideBarFlag, setSideBarFlag }) {
                 <div className='main'>
                     <div className='box'>
                         <span className='title'>15 Categories</span>
-                        <span className='selected'>• Purchased Goods and Services</span>
-                        <span>• Capital Goods</span>
-                        <span>• Fuel- and Energy-Related Activities Not Included in Scope 1 or Scope 2</span>
-                        <span>• Upstream Transportation  and Distribution</span>
-                        <span>• Waste Generated in Operations</span>
-                        <span>• Business Travel</span>
-                        <span>• Employee Commuting</span>
-                        <span>• Upstream Leased Assets</span>
-                        <span>• Downstream Transportation  and Distribution</span>
-                        <span>• Processing of Sold Products</span>
-                        <span>• Use of Sold Products</span>
-                        <span>• End-of-Life Treatment  of Sold Products</span>
-                        <span>• Downstream Leased Assets</span>
-                        <span>• Franchises</span>
-                        <span>• Investments</span>
+                        {
+                            listData?.map((item, index)=>{
+                                return(
+                                    <span className={index===category?'selected':''} key={'category'+index} onClick={()=>{
+                                        setCategory(index)
+                                        setMethod(0)
+                                    }}>• {item?.title}</span>
+                                )
+                            })
+                        }
                     </div>
                     <div className='center'>
                         <div className='box'>
                             <span className='title'>Methods for category 1</span>
-                            <span className='selected'>• Supplier-specific method</span>
-                            <span>• Hybrid method</span>
-                            <span>• Average-data method</span>
-                            <span>• Spend-base method</span>
+                            {
+                                listData[category]?.details?.map((item, index)=>{
+                                    return(
+                                        <span className={method===index?'selected':''} key={'method'+index} onClick={()=>{
+                                            setMethod(index)
+                                        }}>• {item}</span>
+                                    )
+                                })
+                            }
                         </div>
                         <div className='box'>
                             <span className='title'>Input Data</span>
                             <div className='table-container'>
                                 <table>
-                                    <tr>
-                                        <th>Purchased good</th>
-                                        <th>Supplier</th>
-                                        <th>Quantities purchased(kg)</th>
-                                        <th>Surpplier-specific(kgco2/kg)</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Cement</td>
-                                        <td>Supplier C</td>
-                                        <td>200,000</td>
-                                        <td>0.15</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Plaster</td>
-                                        <td>Supplier D</td>
-                                        <td>600,000</td>
-                                        <td>0.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Paint</td>
-                                        <td>Supplier E</td>
-                                        <td>200,000</td>
-                                        <td>0.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Timber</td>
-                                        <td>Supplier F</td>
-                                        <td>100,000</td>
-                                        <td>0.25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Concrete</td>
-                                        <td>Supplier G</td>
-                                        <td>50,000</td>
-                                        <td>0.20</td>
-                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <th>Purchased good</th>
+                                            <th>Supplier</th>
+                                            <th>Quantities purchased(kg)</th>
+                                            <th>Surpplier-specific(kgco2/kg)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Cement</td>
+                                            <td>Supplier C</td>
+                                            <td>200,000</td>
+                                            <td>0.15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plaster</td>
+                                            <td>Supplier D</td>
+                                            <td>600,000</td>
+                                            <td>0.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paint</td>
+                                            <td>Supplier E</td>
+                                            <td>200,000</td>
+                                            <td>0.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Timber</td>
+                                            <td>Supplier F</td>
+                                            <td>100,000</td>
+                                            <td>0.25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Concrete</td>
+                                            <td>Supplier G</td>
+                                            <td>50,000</td>
+                                            <td>0.20</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <div className='button'>Upload Data</div>

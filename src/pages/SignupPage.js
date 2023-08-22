@@ -12,7 +12,7 @@ function SignupPage({ SERVER_URL }) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
-    const [consultant, setConsultant] = useState('')
+    const [consultant, setConsultant] = useState('corporate')
     // const [date, setDate] = useState('')
     const [password, setPassword] = useState('')
     const [company, setCompany] = useState('')
@@ -79,9 +79,12 @@ function SignupPage({ SERVER_URL }) {
                             }
                             axios.post(SERVER_URL + '/signup', obj)
                                 .then(res => {
-                                    console.log(res.data);
+                                    console.log(res.data)
                                     if (!res.data.success) setErrorMessage(res.data.message)
-                                    else setErrorMessage('')
+                                    else{
+                                        setErrorMessage('')
+                                        navigate('/login')
+                                    }
                                 })
                         }
                     }}>Sign Up</div>

@@ -16,7 +16,7 @@ function Routing() {
             <Routes>
                 <Route exact path="/" element={<MainPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>}/>
                 <Route exact path="/about" element={<AboutPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>} />
-                <Route exact path="/calculation" element={<CalculationPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>} />
+                <Route exact path="/calculation" element={<CalculationPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag} SERVER_URL={SERVER_URL}/>} />
                 <Route exact path="/display" element={<DisplayPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>} />
                 <Route exact path="/contact-us" element={<ContactUsPage sideBarFlag={sideBarFlag} setSideBarFlag={setSideBarFlag}/>} />
                 <Route exact path="/login" element={<LoginPage  SERVER_URL={SERVER_URL}/>} />
